@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LeftComponent } from './left/left.component';
 import { DegreeComponent } from './degree/degree.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftComponent,
     DegreeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
