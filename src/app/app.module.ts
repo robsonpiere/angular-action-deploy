@@ -7,6 +7,7 @@ import { LeftComponent } from './left/left.component';
 import { DegreeComponent } from './degree/degree.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     LeftComponent,
     DegreeComponent,
     ExperienceComponent,
-    FooterComponent
+    FooterComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
