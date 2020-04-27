@@ -4,7 +4,7 @@ name: Deploy homepage to githubpages
 
 on:
   push:
-    branches: [ develop ] #use dev in personal repo
+    branches: [ production ]
 
 jobs:
   build-and-deploy:
