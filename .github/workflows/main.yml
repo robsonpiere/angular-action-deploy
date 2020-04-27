@@ -1,0 +1,27 @@
+# Workflow para deploy do git hub pages
+
+name: Deploy homepage to githubpages
+
+on:
+  push:
+    branches: [ develop ] #use dev in personal repo
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run prod
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: dist/robsonpiere # The folder the action should deploy.
